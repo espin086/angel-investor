@@ -14,7 +14,7 @@ Start-up financing is a topic that has been researched extensively in the fields
 
 ## Problem Statement
 ---
-*a problem being investigated for which a solution will be defined*
+The people who fund early-stage start-ups often take on considerable risks and are known as Angel Investors and Venture Capitalists. Angel Investors and Venture Capitalists use their business knowledge, judgement of character, and some early quantiative information to judge the growth potential of a start-up. Given the high-risk/high-reward nature of start-up financing the more information an investor has on a start-up the better.   
 
 ## Datasets and Inputs
 ---
