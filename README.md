@@ -113,25 +113,27 @@ The datasets used in the project include data on over 40,000 start-ups from arou
        * price_amount
        * price_currency_code
 
- 
-       
-
-
 
 
 ## Solution Statement
 ---
-*the solution proposed for the problem given*
+This project's goal is to build a solution that reduces the risk of investing in a start-up by creating a predictive model (machine learning model) of start-up success as defined by not-failing within a set number of years. 
 
 ## A Benchmark Model
 ---
-*some simple or historical model or result to compare the defined solution to*
+It is estimated that about 90% of start-ups fail with 22% failing in their first year, 30% in the second year, and 50% in their fifth year. [source](https://www.investopedia.com/articles/personal-finance/040915/how-many-startups-fail-and-why.asp). The benchmark model will be based on random selection of start-ups versus the machine learning algorithms to see what type of improvement may be seen.
 
 ## Evaluation Metrics
 ---
-*functional representations for how the solution can be measured*
+The evaluation metrics will be precision, recall, and accuracy metrics common to classification problems. The goal is to reduce the likelihood of missing out on a really great start-up because one didn't invest in it. Thus the goal is to reduce the number of 'false negatives' when asking the question, 'does this start-up have a chance of being acquired?'.
 
 ## Project Design
 ---
-*how the solution will be developed and results obtained*
+The project will be designed in the following way. 
+
+* Data will be explored and cleaned
+* Exploratory analysis will determine the right variables to include in the model
+* Feature engineering will extract relevant information to improve model performance
+* A model will be trained on a training set and evaluated on a test set
+* A production endpoint accessible via API (API Gateway/Lambda) will be created to deploy the model
 
