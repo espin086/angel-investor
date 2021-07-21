@@ -148,7 +148,7 @@ The project has the following design.
      * Testing of variable reduction techniques like Principal Component Analysis
      * Dropping of redundant variables
 
-* **[MODEL TRAINING]** Will train several models, including: 
+* **[MODEL TRAINING & TUNING]** Will train several models, including: 
      * K-Nearest Neighbors - to see if simple heuristics like proximity can help predict startup success. The tuning strategy includes varying the number of neighbors to see what works best,
      * Linear Learner - capture linear relationships between startup success and associated variables. The tuning strategy will include the learning rate & L1 regularization to automatically drop variables that are not useful in prediction and reduce overfitting.
      * XGBoost Algorithm - to exploit ensemble models and boosting, which should aim at minimizing the error rates. The tunning strategy will involve the depth of the individual decision trees, learning rate to prevent overfitting, gamma to decide further partitioning of a leaf node of a tree; the more influential the gamma, the more conservative the algorithm will be.
