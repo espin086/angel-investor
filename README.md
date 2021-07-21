@@ -3,7 +3,7 @@ This is an artificial intelligence tool to rate the probability of a start-up su
 
 ## Domain Background
 ---
-Start-up financing is a topic that has been researched extensively in the fields of finance, management, and economics. Financing of start-ups differs from traditional financing of companies in terms of risk and valuation methodologies. These topics have been explored in these highly-cited academic studies: 
+Startup financing is a topic that has been researched extensively in finance, management, and economics. The financing of startups differs from the financing of traditional companies in terms of risk and valuation methodologies. These highly-cited academic studies have explored this topic:
 
 * Yang, C., Bossink, B. and Peverelli, P., 2017. [High-tech start-up firm survival originating from a combined use of internal resources.](https://personal.vu.nl/p.j.peverelli/ChunBossinkPeverelli.pdf) Small Business Economics, 49(4), pp.799-824.
 * Cole, R.A. and Sokolyk, T., 2018. [Debt financing, survival, and growth of start-up firms.](https://rebelcole.com/PDF/Cole-Sokolyk.JCF.2017.pdf) Journal of Corporate Finance, 50, pp.609-625.
@@ -14,11 +14,11 @@ Start-up financing is a topic that has been researched extensively in the fields
 
 ## Problem Statement
 ---
-The people who fund early-stage start-ups often take on considerable risks and are known as Angel Investors and Venture Capitalists. Angel Investors and Venture Capitalists use their business knowledge, judgement of character, and some early quantiative information to judge the growth potential of a start-up. Given the high-risk/high-reward nature of start-up financing the more information an investor has on a start-up the better.   
+The people who fund early-stage startups take on considerable risks and are known as Angel Investors and Venture Capitalists. Angel Investors and Venture Capitalists use their business knowledge, a judgment of character, and some early quantitative information to judge the growth potential. Given the high-risk/high-reward nature of startup financing, the more information an investor has on a startup, the better.
 
 ## Datasets and Inputs
 ---
-The datasets used in the project include data on over 40,000 start-ups from around the world. The source of the dataset is Kaggle.com, a platform that hosts Machine Learning and Artificial Intelligence competitions and data. The data originated from Crunchbase. 
+The datasets used in the project include data on over 40,000 startups from around the world. The dataset source is Kaggle.com, a platform that hosts Machine Learning and Artificial Intelligence competitions and data. The data originated from Crunchbase.
 
 * [Link to Data Set in Kaggle](https://www.kaggle.com/arindam235/startup-investments-crunchbase)
 
@@ -26,9 +26,9 @@ The datasets used in the project include data on over 40,000 start-ups from arou
 Labels: the label for this dataset indicates whether a start-up:
 * Is still operating (in-business)
 * Closed down and went out of business
-* Was acquired by a larger company
+* A larger company acquired it
 
-*note: that the data are unbalanced as the majority of the companies are still operating 80+% and only about 9% have failed. This is contrary to what we see in real life, where the majority of start-ups fail. This will be dealth with using various sampling techniques like SMOTE and oversampling the minority class. 
+*note: that the data are unbalanced as the majority of the companies are still operating 80+% and only about 9% have failed. This disbalance is contrary to what we see in real life, where the majority of startups fail. This disbalance is reduced by sampling techniques like SMOTE and oversampling the minority class.
 
 
 * Datasets and their variables
@@ -126,7 +126,7 @@ Labels: the label for this dataset indicates whether a start-up:
 
 ## Solution Statement
 ---
-This project's goal is to build a solution that reduces the risk of investing in a start-up by creating a predictive model (machine learning model) of start-up success as defined by not-failing within a set number of years. 
+This project aims to build a solution that reduces the risk of investing in a startup by creating a predictive model (machine learning model) of startup success as defined by not failing within a set number of years.
 
 ## A Benchmark Model
 ---
@@ -134,23 +134,23 @@ It is estimated that about 90% of start-ups fail with 22% failing in their first
 
 ## Evaluation Metrics
 ---
-The evaluation metrics will be Precision (True Positive / (True Positive + False Positive)) and ROC-AUC. The goal is to reduce the likelihood of missing out on a really great start-up because one didn't invest in it. Thus the goal is to reduce the number of 'false negatives' when asking the question, 'does this start-up have a chance of being acquired?'.
+The evaluation metrics will be Precision (True Positive / (True Positive + False Positive)) and ROC-AUC. The goal is to reduce the likelihood of missing out on a really great startup because one didn't invest in it. Thus the goal is to reduce the number of 'false negatives' when asking the question, 'does this startup have a chance of being acquired?'.
 
 ## Project Design
 ---
-The project will be designed in the following way. 
+The project has the following design.
 
-* Data will be explored and cleaned including: 
-    * Scaling and normalizing the data
-    * An assessment will be made to drop missing values or to use imputation to fill in missing values
-    * Outliers in the data will be detected using a Random Cut Forest Algorithm, careful attention will be made in how to handle the outliers. If they are data errors then they will be deleted, but in this case an outlier may be a start-up that turns out to be Facebook or Google and we would not want to drop them as those are the kinds of start-ups that angel investors would NOT want to miss. 
-* Exploratory analysis will determine the right variables to include in the model, resulting in: 
+* **[DATA EXPLORATION]** Data will be explored and cleaned, including:
+     * Scaling and normalizing the data
+     * An assessment to drop missing values or to use imputation to fill in missing values.
+     * Outliers in the data will be detected using a Random Cut Forest Algorithm; careful attention on outlier management to follow. Deleting outliers if they are errors, however, an outlier may be a startup that turns out to be Facebook or Google, and we would not want to drop them as those are the kinds of startups that angel investors would NOT want to miss.
+* **[VARIABLE SELECTION]** Exploratory analysis will determine the correct variables to include in the model, resulting in:
      * Testing of variable reduction techniques like Principal Component Analysis
      * Dropping of redundant variables
-* Feature engineering will extract relevant information to improve model performance
-* A model will be trained on a training set and evaluated on a test set, several models will be attemped to classify the changes of a start-up succeeding: 
-     * K-Nearest Neighbors - to see if simple heuristics like proximity can be useful in predicting start-up success. Tuning strategy includes varying the number of neighbors to see what works best,
-     * Linear Learner - a linear model to capture linear relationships between start-up success and associated variables. The tuning strategy will include the learning rate & L1 regularization to automatically drop variables that are not useful in prediction and to reduce overfitting. 
-     * XGBoost Algorithm - to exploit ensemble models and boosting which should aim at minimizing the error rates. The tunning strategy will involve the depth of the individual decision trees, learning rate to prevent overfitting, gamma to decide further partitioning of a leaf node of a tree, the larger the gamma the more conservative teh algorithm will be.  
-* A production endpoint accessible via API (API Gateway/Lambda) will be created to deploy the model
+
+* **[MODEL TRAINING]** Will train several models, including: 
+     * K-Nearest Neighbors - to see if simple heuristics like proximity can help predict startup success. The tuning strategy includes varying the number of neighbors to see what works best,
+     * Linear Learner - capture linear relationships between startup success and associated variables. The tuning strategy will include the learning rate & L1 regularization to automatically drop variables that are not useful in prediction and reduce overfitting.
+     * XGBoost Algorithm - to exploit ensemble models and boosting, which should aim at minimizing the error rates. The tunning strategy will involve the depth of the individual decision trees, learning rate to prevent overfitting, gamma to decide further partitioning of a leaf node of a tree; the more influential the gamma, the more conservative the algorithm will be.
+* **[PUTTING IN PRODUCTION]** Will create a production endpoint accessible via API (API Gateway/Lambda) to host the model.
 
