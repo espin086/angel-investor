@@ -24,7 +24,7 @@ The datasets used in the project include data on over 40,000 start-ups from arou
 
 * Datasets and their variables
 
-     * Companies (dataset):
+     * **Companies (dataset):**
        * permalink
        * (primary)name
        * homepage_url
@@ -45,7 +45,7 @@ The datasets used in the project include data on over 40,000 start-ups from arou
        * first_funding_at
        * last_funding_at
        
-     * Rounds (dataset):
+     * **Rounds (dataset):**
        * company_permalink
        * (primary) company_name
        * company_category_list
@@ -63,7 +63,7 @@ The datasets used in the project include data on over 40,000 start-ups from arou
        * funded_year
        * raised_amount_usd
       
-     * Investments (dataset):
+     * **Investments (dataset):**
        * company_permalink
        * (primary) company_name
        * company_category_list
@@ -89,7 +89,7 @@ The datasets used in the project include data on over 40,000 start-ups from arou
        * funded_year
        * raised_amount_usd
 
-    * Acquisitions (dataset):
+    * **Acquisitions (dataset):**
        * company_permalink
        * (primary) company_name
        * company_category_list
