@@ -21,10 +21,12 @@ The people who fund early-stage start-ups often take on considerable risks and a
 The datasets used in the project include data on over 40,000 start-ups from around the world. The source of the dataset is Kaggle.com, a platform that hosts Machine Learning and Artificial Intelligence competitions and data. The data originated from Crunchbase. 
 
 * [Link to Data Set in Kaggle](https://www.kaggle.com/arindam235/startup-investments-crunchbase)
+
 * Datasets and their variables
+
      * Companies (dataset):
        * permalink
-       * name
+       * (primary)name
        * homepage_url
        * category_list
        * market
@@ -32,7 +34,89 @@ The datasets used in the project include data on over 40,000 start-ups from arou
        * country_code
        * state_code
        * region
-       * (target) status
+       * status
+       * region
+       * city
+       * funding_round
+       * founded_at
+       * founding_year
+       * founding_month
+       * funding_quarter
+       * first_funding_at
+       * last_funding_at
+       
+     * Rounds (dataset):
+       * company_permalink
+       * (primary) company_name
+       * company_category_list
+       * company_market
+       * company_country_code
+       * company_state_code
+       * company_region
+       * company_city
+       * funding_round_permalink
+       * funding_round_type
+       * funding_round_code
+       * funded_at
+       * funded_month
+       * funded_quarter
+       * funded_year
+       * raised_amount_usd
+      
+     * Investments (dataset):
+       * company_permalink
+       * (primary) company_name
+       * company_category_list
+       * company_market
+       * company_country_code
+       * company_state_code
+       * company_region
+       * company_city
+       * investor_permalink
+       * investor_name
+       * investor_category_list
+       * investor_market
+       * investor_country_code
+       * investor_state_code
+       * investor_region
+       * investor_city
+       * funding_round_permalink
+       * funding_round_type
+       * funding_round_code
+       * funded_at
+       * funded_month
+       * funded_quarter
+       * funded_year
+       * raised_amount_usd
+
+    * Acquisitions (dataset):
+       * company_permalink
+       * (primary) company_name
+       * company_category_list
+       * company_market
+       * company_country_code
+       * company_state_code
+       * company_region
+       * company_city
+       * acquirer_permalink
+       * acquirer_name
+       * acquirer_category_list
+       * acquirer_market
+       * acquirer_country_code
+       * acquirer_state_code
+       * acquirer_region
+       * acquirer_city
+       * acquired_at
+       * acquired_month
+       * acquired_quarter
+       * acquired_year
+       * price_amount
+       * price_currency_code
+
+ 
+       
+
+
 
 
 ## Solution Statement
