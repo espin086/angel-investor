@@ -22,6 +22,15 @@ The datasets used in the project include data on over 40,000 start-ups from arou
 
 * [Link to Data Set in Kaggle](https://www.kaggle.com/arindam235/startup-investments-crunchbase)
 
+
+Labels: the label for this dataset indicates whether a start-up:
+* Is still operating (in-business)
+* Closed down and went out of business
+* Was acquired by a larger company
+
+*note: that the data are unbalanced as the majority of the companies are still operating 80+% and only about 9% have failed. This is contrary to what we see in real life, where the majority of start-ups fail. This will be dealth with using various sampling techniques like SMOTE and oversampling the minority class. 
+
+
 * Datasets and their variables
 
      * **Companies (dataset):**
@@ -34,7 +43,7 @@ The datasets used in the project include data on over 40,000 start-ups from arou
        * country_code
        * state_code
        * region
-       * status
+       * (label) status
        * region
        * city
        * funding_round
@@ -125,15 +134,23 @@ It is estimated that about 90% of start-ups fail with 22% failing in their first
 
 ## Evaluation Metrics
 ---
-The evaluation metrics will be precision, recall, and accuracy metrics common to classification problems. The goal is to reduce the likelihood of missing out on a really great start-up because one didn't invest in it. Thus the goal is to reduce the number of 'false negatives' when asking the question, 'does this start-up have a chance of being acquired?'.
+The evaluation metrics will be Precision (True Positive / (True Positive + False Positive)) and ROC-AUC. The goal is to reduce the likelihood of missing out on a really great start-up because one didn't invest in it. Thus the goal is to reduce the number of 'false negatives' when asking the question, 'does this start-up have a chance of being acquired?'.
 
 ## Project Design
 ---
 The project will be designed in the following way. 
 
-* Data will be explored and cleaned
-* Exploratory analysis will determine the right variables to include in the model
+* Data will be explored and cleaned including: 
+    * Scaling and normalizing the data
+    * An assessment will be made to drop missing values or to use imputation to fill in missing values
+    * Outliers in the data will be detected using a Random Cut Forest Algorithm, careful attention will be made in how to handle the outliers. If they are data errors then they will be deleted, but in this case an outlier may be a start-up that turns out to be Facebook or Google and we would not want to drop them as those are the kinds of start-ups that angel investors would NOT want to miss. 
+* Exploratory analysis will determine the right variables to include in the model, resulting in: 
+     * Testing of variable reduction techniques like Principal Component Analysis
+     * Dropping of redundant variables
 * Feature engineering will extract relevant information to improve model performance
-* A model will be trained on a training set and evaluated on a test set
+* A model will be trained on a training set and evaluated on a test set, several models will be attemped to classify the changes of a start-up succeeding: 
+     * K-Nearest Neighbors 
+     * Linear Learner
+     * XGBoost Algorithm
 * A production endpoint accessible via API (API Gateway/Lambda) will be created to deploy the model
 
