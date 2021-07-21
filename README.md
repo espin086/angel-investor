@@ -149,8 +149,8 @@ The project will be designed in the following way.
      * Dropping of redundant variables
 * Feature engineering will extract relevant information to improve model performance
 * A model will be trained on a training set and evaluated on a test set, several models will be attemped to classify the changes of a start-up succeeding: 
-     * K-Nearest Neighbors 
-     * Linear Learner
-     * XGBoost Algorithm
+     * K-Nearest Neighbors - to see if simple heuristics like proximity can be useful in predicting start-up success. Tuning strategy includes varying the number of neighbors to see what works best,
+     * Linear Learner - a linear model to capture linear relationships between start-up success and associated variables. The tuning strategy will include the learning rate & L1 regularization to automatically drop variables that are not useful in prediction and to reduce overfitting. 
+     * XGBoost Algorithm - to exploit ensemble models and boosting which should aim at minimizing the error rates. The tunning strategy will involve the depth of the individual decision trees, learning rate to prevent overfitting, gamma to decide further partitioning of a leaf node of a tree, the larger the gamma the more conservative teh algorithm will be.  
 * A production endpoint accessible via API (API Gateway/Lambda) will be created to deploy the model
 
