@@ -18,7 +18,22 @@ The people who fund early-stage start-ups often take on considerable risks and a
 
 ## Datasets and Inputs
 ---
-*data or inputs being used for the problem*
+The datasets used in the project include data on over 40,000 start-ups from around the world. The source of the dataset is Kaggle.com, a platform that hosts Machine Learning and Artificial Intelligence competitions and data. The data originated from Crunchbase. 
+
+* [Link to Data Set in Kaggle](https://www.kaggle.com/arindam235/startup-investments-crunchbase)
+* Datasets and their variables
+     * Companies (dataset):
+       * permalink
+       * name
+       * homepage_url
+       * category_list
+       * market
+       * funding_total_usd
+       * country_code
+       * state_code
+       * region
+       * (target) status
+
 
 ## Solution Statement
 ---
