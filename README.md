@@ -11,6 +11,10 @@ Startup financing is a topic that has been researched extensively in finance, ma
 * Åstebro, T. and Bernhardt, I., 2003. [Start-up financing, owner characteristics, and survival.](https://d1wqtxts1xzle7.cloudfront.net/49879491/TM___JK_Start-up_Financing_manuscript_2010_11_04.pdf?1477479846=&response-content-disposition=inline%3B+filename%3DStart_up_Financing_in_the_Age_of_Globali.pdf&Expires=1626899842&Signature=cjj9vaq~lLG6Kv8jJr~I43QPyteiNRxrY-rmBGAoF5u5UjoWUX3HNKwrtCM2xwGTn8JacvO6Jd~BvuN~xdhb6Vq4fbCsKR9HVPnObiAj2DLRceKK3aJ-7uK2CuS9llLYZ666o3EERwRSlzKJk8OUTW5c9JBQ~AWP~DNOjMxylgSon6MHPMCHOktlxhlvRBjcd0g7lHcFUqYq2WO5rXQUwpl8~qgbqeqV-hiLCnxLIsHxDXJx8C2yqu0NW7vIoXeWW0snfEZ-Rw52Z781SWHwJUNo5JQjxzjNfXQ~eqQF1bJRkZh9s34PyG7v~ziwQ3~~gTnMUrHRTkPI0nOWtyOQhg__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA) Journal of Economics and Business, 55(4), pp.303-319.
 * Gartner, W., Starr, J. and Bhat, S., 1999. [Predicting new venture survival: an analysis of “anatomy of a start-up.”](https://www.sciencedirect.com/science/article/pii/S0883902697000633) cases from Inc. Magazine. Journal of Business venturing, 14(2), pp.215-232.
 
+Other useful resources:
+* [12 Things About Product Market Fit](https://a16z.com/2017/02/18/12-things-about-product-market-fit/)
+* [Product-User Fit Comes Before Product-Market Fit](https://a16z.com/2019/09/16/product-user-fit-comes-before-product-market-fit/)
+
 
 ## Problem Statement
 ---
